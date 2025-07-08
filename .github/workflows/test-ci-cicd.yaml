@@ -33,7 +33,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.GITEA_REGISTRY }}/silverkeytech/app-python-test:${{ env.COMMIT_ID }}
+          tags: ${{ secrets.GITEA_REGISTRY }}/silverkeytech/${{values.app_name}}:${{ env.COMMIT_ID }}
     outputs:
       commit_id: ${{ env.COMMIT_ID }}
 
