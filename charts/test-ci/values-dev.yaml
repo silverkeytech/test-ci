@@ -1,0 +1,5 @@
+replicaCount: 1
+image:
+  repository: silverkeytech/test-ci
+  pullPolicy: IfNotPresent
+  tag: test-ci-prod-latest

@@ -1,0 +1,10 @@
+replicaCount: 2
+image:
+  repository: silverkeytech/test-ci
+  pullPolicy: IfNotPresent
+  tag: test-ci-prod-latest
+
+resources:
+  requests:
+    cpu: 60m
+    memory: 60M
