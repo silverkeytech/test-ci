@@ -2,4 +2,4 @@ replicaCount: 1
 image:
   repository: registry.arc-center.run/silverkeytech/test-ci
   pullPolicy: IfNotPresent
-  tag: b63bcc
+  tag: b155e6
