@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: registry.arc-center.run/silverkeytech/test-c
+  repository: registry.arc-center.run/silverkeytech/test-ci
   pullPolicy: IfNotPresent
   tag: test-ci-prod-latest
 imagePullSecrets: []
