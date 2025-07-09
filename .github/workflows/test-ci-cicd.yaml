@@ -54,7 +54,8 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: 'Update values.yaml with commit ID ${{ needs.ci.outputs.commit_id }}'
-
+          pull: true
+          
       - name: Install ArgoCD CLI
         run: |
           curl -sSL -o argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
