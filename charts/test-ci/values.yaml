@@ -23,7 +23,7 @@ ingress:
   className: "nginx"
   annotations: {}
   hosts:
-    - host: test-ci-prod.test.com
+    - host: test-ci-prod.arc-center.run
       paths:
         - path: /
           pathType: Prefix
