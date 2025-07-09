@@ -28,13 +28,17 @@ jobs:
           registry: ${{ secrets.GITEA_REGISTRY }}
           username: ${{ secrets.GITEA_USERNAME }}
           password: ${{ secrets.GITEA_PAT }}
-
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v3
+        
       - name: Build and push to Gitea Registry
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
           platforms: linux/amd64
+          builder: ${{ steps.buildx.outputs.name }}
           tags: ${{ secrets.GITEA_REGISTRY }}/silverkeytech/test-ci:${{ steps.set_commit_id.outputs.commit_id }}
 
   cd:
