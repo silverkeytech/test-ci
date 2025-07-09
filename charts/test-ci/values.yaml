@@ -3,7 +3,8 @@ image:
   repository: registry.arc-center.run/silverkeytech/test-ci
   pullPolicy: IfNotPresent
   tag: test-ci-prod-latest
-imagePullSecrets: []
+imagePullSecrets: 
+  - name: gitea-registry-secret
 nameOverride: ""
 fullnameOverride: ""
 podAnnotations: {}
