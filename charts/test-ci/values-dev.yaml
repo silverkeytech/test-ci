@@ -2,4 +2,4 @@ replicaCount: 1
 image:
   repository: silverkeytech/test-ci
   pullPolicy: IfNotPresent
-  tag: c5800d
+  tag: 99a381
