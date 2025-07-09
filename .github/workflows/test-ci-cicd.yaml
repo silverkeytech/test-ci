@@ -48,6 +48,7 @@ jobs:
       - name: Modify values file
         run: |
           echo "${{ needs.ci.outputs.commit_id }}"
+          .image.repository = "registry.arc-center.run/silverkeytech/test-ci" |
           yq -Yi '.image.tag = "${{ needs.ci.outputs.commit_id }}"' charts/test-ci/values-dev.yaml
 
       - name: Commit and push changes manually
