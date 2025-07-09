@@ -53,7 +53,7 @@ jobs:
 
       - name: Modify values file
         run: |
-           yq -i '
+           yq -i -y '
             .image.repository = "registry.arc-center.run/silverkeytech/test-ci" |
             .image.tag = "${{ needs.ci.outputs.commit_id }}"
             ' charts/test-ci/values-dev.yaml
